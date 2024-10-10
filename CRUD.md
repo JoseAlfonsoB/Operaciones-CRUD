@@ -74,7 +74,8 @@ SELECT * FROM Usuarios WHERE LENGTH(password) >= 9;
 ```SQL
 -- Consulta que muestra solo el email con una contraseña mayor a 8 caracteres.
 SELECT email FROM Usuarios WHERE LENGTH (password) >= 8;
-
+-- Consulta que muestra solo el email con los ID's que sean pares.
+SELECT email FROM Usuarios WHERE MOD (id_usuario, 2) = 0;
 ```
 
 ## UPDATE
