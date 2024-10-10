@@ -110,3 +110,7 @@ DELETE * FROM Usuarios WHERE email = "ejemplo2@gmail.com";
 - Eliminar usuarios que tengan una contraseña que contenga letras mayusculas usando expresiones regulares (cadena de texto [REGEXP] investigar expresines regulares).
 - Eliminar usuarios con contraseñas que contengan solo números.
 - Eliminiar usuarios con correos que no tengan el dominio GMAIL.
+```SQL
+--Sentencia para eliminar usuarios cuyo email tengan uno o mas cincos.
+DELETE usuario FROM Usuarios WHERE email LIKE '%5%';
+```
