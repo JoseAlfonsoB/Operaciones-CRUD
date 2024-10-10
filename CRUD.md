@@ -71,6 +71,12 @@ SELECT * FROM Usuarios WHERE LENGTH(password) >= 9;
 
 - Realiza una consulta que muestre solo el email pero que coincida con una contraseña de mas de 8 caracteres y otra que realice una consulta a los ID's pares.
 
+```SQL
+-- Consulta que muestra solo el email con una contraseña mayor a 8 caracteres.
+SELECT email FROM Usuarios WHERE LENGTH (password) >= 8;
+
+```
+
 ## UPDATE
 
 La operación _ACTUALIZAR_ es utiliza para modificar registros existentes en la base de datos. Esto se hace con la sentenica `UPDATE`
