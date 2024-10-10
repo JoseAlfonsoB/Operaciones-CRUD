@@ -36,9 +36,19 @@ INSERT Usuarios (email, password) VALUES("ejemplo3@hotmail.com", "12345678");
 
 ### EJERCICIOS.
 
-Identifica los tipos de errores que pueden salir en esta tabla.
+- Identifica los tipos de errores que pueden salir en esta tabla.
 
-Inserta 4 registros nuevos en un solo insert.
+- Inserta **4 registros nuevos** en un solo insert.
+
+```SQL
+
+-- Instertar 4 datos en un solor INSERT.
+INSERT INTO Usuarios (email, password) VALUES
+("ejemplo4@gmail.com", "987654321",),
+("ejemplo5@gmail.com", "159753264",),
+("ejemplo6@gmail.com", "753159846",),
+("ejemplo7@gmail.com", "123654879",);
+```
 
 ## READ
 
@@ -59,7 +69,7 @@ SELECT * FROM Usuarios WHERE LENGTH(password) >= 9;
 
 ### EJERCICIOS :(
 
-Realiza una consulta que muestre solo el email per qeu concida con una contraseña de mas de 8 caracteres y otra que realice una consulta a los ID's pares.
+- Realiza una consulta que muestre solo el email pero que coincida con una contraseña de mas de 8 caracteres y otra que realice una consulta a los ID's pares.
 
 ## UPDATE
 
