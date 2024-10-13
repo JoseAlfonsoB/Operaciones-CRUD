@@ -95,7 +95,7 @@ UPDATE Usuarios SET password = "1a2b3c4d5" email = "ejemplo2@gmail.com" WHERE id
 
 ## DELETE
 
-La operación _ELEMINAR_ se usa par aborrar registros de la base de datos. Esto se realizar con la sentencia `DELETE`. **Debemos ser muy cuidadosos con esta operación, ya que una ves qeu los datos son eliminados, no pueden ser reucperados**
+La operación _ELEMINAR_ se usa par aborrar registros de la base de datos. Esto se realizar con la sentencia `DELETE`. **Debemos ser muy cuidadosos con esta operación, ya que una ves qeu los datos son eliminados, no pueden ser recuperados**
 
 ```SQL
 -- Eliminar el usuario por el ID.
@@ -110,7 +110,14 @@ DELETE * FROM Usuarios WHERE email = "ejemplo2@gmail.com";
 - Eliminar usuarios que tengan una contraseña que contenga letras mayusculas usando expresiones regulares (cadena de texto [REGEXP] investigar expresines regulares).
 - Eliminar usuarios con contraseñas que contengan solo números.
 - Eliminiar usuarios con correos que no tengan el dominio GMAIL.
+
 ```SQL
 --Sentencia para eliminar usuarios cuyo email tengan uno o mas cincos.
 DELETE usuario FROM Usuarios WHERE email LIKE '%5%';
+--
+DELETE usuario FROM nombre_de_la_tabla WHERE contraseña REGEXP '[A-Z]';
+--
+DELETE FROM nombre_de_la_tabla WHERE contraseña REGEXP '^[0-9]+$';
+--
+DELETE FROM nombre_de_la_tabla WHERE email NOT LIKE '%@gmail.com';
 ```
