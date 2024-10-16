@@ -115,9 +115,16 @@ DELETE * FROM Usuarios WHERE email = "ejemplo2@gmail.com";
 --Sentencia para eliminar usuarios cuyo email tengan uno o mas cincos.
 DELETE usuario FROM Usuarios WHERE email LIKE '%5%';
 --
-DELETE usuario FROM nombre_de_la_tabla WHERE contraseña REGEXP '[A-Z]';
+DELETE usuario FROM nombre_de_la_tabla WHERE password REGEXP '[A-Z]';
 --
-DELETE FROM nombre_de_la_tabla WHERE contraseña REGEXP '^[0-9]+$';
+DELETE FROM nombre_de_la_tabla WHERE password REGEXP '^[0-9]+$';
 --
 DELETE FROM nombre_de_la_tabla WHERE email NOT LIKE '%@gmail.com';
 ```
+
+- NOTA: REGEXP es un forma de buscar patrones especificos en texto. Piensa en ella como una lupa magiaca que encuentra ciertos conjuntos de caracteres.
+  Aqui va una comparacion mas simple.
+  **NORMALMENTE**: Buscas una palabra especifica en un libro.
+  Con **REGEXP**: Puedes buscar todas las palabras que empiezan con "A", o con todas las palabras que tengan "ing" al final.
+
+Cuando usamos [A-Z] , le decimos a SQL: "Encuetra cualquier letra mayuscula entren A y Z". Así que si usa una contraseña tiene alguna letra mayúscula, REGEXP '[A-Z]' la encontrará.
